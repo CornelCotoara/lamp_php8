@@ -33,7 +33,7 @@ RUN sed -i 's#/var/www/localhost/htdocs#/var/www/html#g' /etc/apache2/httpd.conf
 #Start apache
 RUN mkdir -p /run/apache2
 
-RUN mkdir /var/www/html/
+#RUN mkdir /var/www/html/
 
 VOLUME  /var/www/html/
 WORKDIR  /var/www/html/
