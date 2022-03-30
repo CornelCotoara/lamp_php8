@@ -10,8 +10,8 @@ RUN apk --update -- upgrade && \
   date
 
 RUN set -xe \
-  && echo "http://dl-cdn.alpinelinux.org/alpine/edge/comunity"  >> /etc/apk/repositories \
-  && echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing"  >> /etc/apk/repositories \
+  && echo "http://dl-cdn.alpinelinux.org/alpine/3.15/comunity"  >> /etc/apk/repositories \
+  && echo "http://dl-cdn.alpinelinux.org/alpine/3.15/testing"  >> /etc/apk/repositories \
   && apk --update -- upgrade
 # prerequisites
 RUN apk add --no-cache bash \
