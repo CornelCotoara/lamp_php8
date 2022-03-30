@@ -1,0 +1,32 @@
+version: "3.3"
+services:
+  web:
+    container_name: apache_server
+    image: ghcr.io/cornelcotoara/alpine-lamp:master
+    ports:
+       - "80:80"
+       - "443:443"
+    volumes:
+      - ./html:/var/www/html
+    restart: always
+  mysql_db:
+    image: mysql:latest
+    container_name: mysql_server
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: changeme
+      MYSQL_USER: changeme
+      MYSQL_PASSWORD: changeme
+      MYSQL_ROOT_PASSWORD: changeme
+    restart: always
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+     - PMA_ARBITRARY=1
+    restart: always
+    ports:
+     - 8080:80
+    volumes:
+     - /sessions
