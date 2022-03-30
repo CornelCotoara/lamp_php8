@@ -83,7 +83,8 @@ RUN apk add --no-cache bash \
 				php8-pdo \
 				php8-bz2 \
 				php8-mysqli \
-				libxml2-dev 
+				libxml2-dev \
+			        apache2‑ctl
         
 RUN ln -sf /usr/bin/php8 /usr/bin/php
 RUN curl -sS https://getcomposer.org/installer | php8 -- --install-dir=/usr/bin --filename=composer 
