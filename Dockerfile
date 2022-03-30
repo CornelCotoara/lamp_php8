@@ -15,9 +15,9 @@ RUN set -xe \
   && apk --update -- upgrade
 # prerequisites
 RUN apk add --no-cache bash \
-        apache2 \
-				libxml2-dev \
-				apache2-utils
+                       apache2 \
+		       libxml2-dev \
+		       apache2-utils
         
 RUN ln -sf /usr/bin/php8 /usr/bin/php
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer 
