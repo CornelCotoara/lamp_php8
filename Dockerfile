@@ -1,5 +1,5 @@
 
-FROM fpm-alpine3.15
+FROM php:fpm-alpine3.15
 MAINTAINER Cornel Cotora
 
 ARG TZ='Europe/Bucharest'
